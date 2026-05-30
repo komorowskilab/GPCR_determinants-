@@ -2,9 +2,11 @@
 
 In this project, we are studying determinants of two phylogenetically similar but pharmacologically different GPCRs using interpretable rule-based models.
 
-The workflow is as follows:  
+The general workflow and workflow specific for distance model is as follows:  
 
-# insert image
+<img width="600" height="400" alt="workflow" src="https://github.com/user-attachments/assets/d06f636d-065e-4814-a293-866c04977541" />
+<img width="600" height="500" alt="workflow_distance" src="https://github.com/user-attachments/assets/f9baff61-c630-47f9-82ef-c7dce61e42d7" />
+
 
 ## Code Organization
 Each step of the workflow corresponds to specific R scripts and resources:
@@ -38,28 +40,28 @@ Each step of the workflow corresponds to specific R scripts and resources:
 - `plddt_score_calculator.py`
 - `plddt_score_histogram.py`
 
-- Preparation of Data Files
+#### Preparation of Data Files
 - **Sequence Model:** `sequence_model.R`
 - **Physicochemical Model:** `physicochemical_model_prep.R`
 - **Distance Model:** `distance_model_prep.R`
 
-- Training and Testing 
+#### Training and Testing 
 - **Sequence Model:** `sequence_model.R`
 - **Physicochemical Model:** `physicochemical_model.R`
 - **Distance Model:** `distance_model.R`
 - **Merged Model:** `merged_model.R`
 
-- ROC Scores Overlay Plot
+#### ROC Scores Overlay Plot
 - `roc_overlay.R`
 
-- Uncharacterized Mutant Plotting
+#### Uncharacterized Mutant Plotting
 - `uncharacterized_mutant_plot.py`
 
-- Coloring the GPCR Residues According to Distances by Changing the B-Factor
-- Column
+#### Coloring the GPCR Residues According to Distances by Changing the B-Factor Column
+
 - `changing_pdb_column_to_distance.py`
 
-- Clustering Rules for Isoform Data
+#### Clustering Rules for Isoform Data
 - Pipeline and code for sequence model was used for clustering the isoform data.
 
 > **Note:** Code for sequence model `sequence_model.R` contains both preparation of the file and training/testing.
